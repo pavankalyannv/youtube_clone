@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { toggleMenu } from "../utils/redux/sideBarSlice";
+import { toggleMenu, closeMenu } from "../utils/redux/sideBarSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { addCache } from "../utils/redux/searchSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -36,11 +37,14 @@ const Header = () => {
         >
           menu
         </span>
-        <img
-          className="pl-4 w-24"
-          src="https://th.bing.com/th/id/R.0faa596df23dc2839e2e11153326a8c9?rik=SG2k903oBpVIjQ&riu=http%3a%2f%2fcdn04.androidauthority.net%2fwp-content%2fuploads%2f2017%2f08%2fnew-youtube-logo.jpg&ehk=y1C%2fuXpCZpXuzGNQdYXSsfx7g2jqs7dZWRnJXuhoK4U%3d&risl=&pid=ImgRaw&r=0"
-          alt="logo"
-        />
+        <Link to="/">
+          <img
+            onClick={() =>  dispatch(closeMenu())}
+            className="pl-4 w-24"
+            src="https://th.bing.com/th/id/R.0faa596df23dc2839e2e11153326a8c9?rik=SG2k903oBpVIjQ&riu=http%3a%2f%2fcdn04.androidauthority.net%2fwp-content%2fuploads%2f2017%2f08%2fnew-youtube-logo.jpg&ehk=y1C%2fuXpCZpXuzGNQdYXSsfx7g2jqs7dZWRnJXuhoK4U%3d&risl=&pid=ImgRaw&r=0"
+            alt="logo"
+          />
+        </Link>
       </div>
       <div className="p-3">
         <div className="flex">
@@ -48,26 +52,28 @@ const Header = () => {
             type="text"
             onChange={(e) => setSearchInput(e.target.value)}
             className="w-[400px] h-auto border border-gray-600 rounded-l-full px-5"
-            onFocus={()=>setShowSuggestions(true)}
-            onBlur={()=>setShowSuggestions(false)}
+            onFocus={() => setShowSuggestions(true)}
+            onBlur={() => setShowSuggestions(false)}
           />
 
           <div className="material-symbols-outlined border p-2 bg-gray-100 border-gray-600 rounded-r-full">
             search
           </div>
         </div>
-       {showSuggestions && <div className="fixed mt-1 p-2 w-[400px] h-[300px] bg-gray-100 border border-gray-600 rounded-2xl">
-          <ul className="">
-            {suggestions.map((item) => (
-              <li className="flex">
-                <span class="material-symbols-outlined pt-1" width="25">
-                  search
-                </span>{" "}
-                <p className="ml-2 text-lg">{item}</p>
-              </li>
-            ))}
-          </ul>
-        </div>}
+        {showSuggestions && (
+          <div className="fixed mt-1 p-2 w-[400px] h-[300px] bg-gray-100 border border-gray-600 rounded-2xl">
+            <ul className="">
+              {suggestions.map((item) => (
+                <li className="flex">
+                  <span class="material-symbols-outlined pt-1" width="25">
+                    search
+                  </span>{" "}
+                  <p className="ml-2 text-lg">{item}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div>
         <img
