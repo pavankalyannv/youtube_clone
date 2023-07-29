@@ -8,7 +8,7 @@ const Sidebar = () => {
   const dispatch = useDispatch();
   return (
     // m-2 p-5 w-max
-    <div className="">
+    <div className=""  onBlur={()=> dispatch(closeMenu())}>
       <nav
         id="sidenav-2"
         class="fixed left-0 top-0 z-[1035] h-screen w-60 -translate-x-full overflow-hidden bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] data-[te-sidenav-hidden='false']:translate-x-0 dark:bg-gray-10"
@@ -16,6 +16,7 @@ const Sidebar = () => {
         data-te-sidenav-hidden="false"
         data-te-sidenav-mode="side"
         data-te-sidenav-content="#content"
+       
       >
         <div className="flex ml-2 p-3">
         <span

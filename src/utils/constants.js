@@ -17,6 +17,10 @@ export const RELATED_SEARCH =
   GOOGLE_API_KEY +
   "&relatedToVideoId=";
 
+export const SEARCH_TEXT_API =
+  "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&type=video&key=" +
+  GOOGLE_API_KEY + "&q=";
+
 export const SIDEBARDATA = [
   {
     icon: "home",

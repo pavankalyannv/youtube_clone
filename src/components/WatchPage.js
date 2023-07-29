@@ -15,7 +15,7 @@ const WatchPage = () => {
     dispatch(closeMenu());
 
     getComments();
-  }, []);
+  }, [videoId]);
 
   const getComments = async () => {
     const data = await fetch(COMMENTS_API + videoId.get("v"));
@@ -43,6 +43,8 @@ const WatchPage = () => {
         </div>
 
         <div className="w-[750px]">
+        <h4 className="font-bold text-lg m-2 p-2"> Comments: </h4>
+        <hr/>
           {comments.map((i, index) => (
             <CommentsContainer key={'k'+index} data={i} />
           ))}
