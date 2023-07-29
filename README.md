@@ -16,21 +16,21 @@ You may also see any lint errors in the console.
 
 ###Current Features:
 ------------------- 
--Toggle Screen
--Search using Debouncing and Caching 
--Show Suggestions based on input 
--Search as per suggested result
--Clear Search
--Rendering related content
--WatchPage
--Comments
+- Toggle Screen
+- Search using Debouncing and Caching 
+- Show Suggestions based on input 
+- Search as per suggested result
+- Clear Search
+- Rendering related content
+- WatchPage
+- Comments
 
 ###Upcoming:
 -------------
--Live chat 
--Search By tag names
--Shots
--Light | Dark mode
+- Live chat 
+- Search By tag names
+- Shots
+- Light | Dark mode
 
 
 
