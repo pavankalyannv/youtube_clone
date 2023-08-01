@@ -39,7 +39,7 @@ const Sidebar = () => {
         <ul className="w-full py-2">
           {SIDEBARDATA.map((i, index) => (
             <Link key={"a" + index} to={i.url}>
-              <li className="m-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 px-3 rounded-lg">
+              <li onClick={()=>dispatch(closeMenu())} className="m-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 px-3 rounded-lg">
                 <span className="material-symbols-outlined ">{i.icon}</span>
                 <span className="text-md pl-1">{i.tabName}</span>
               </li>

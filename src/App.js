@@ -6,6 +6,7 @@ import VideoContainer from "./components/VideoContainer";
 import WatchPage from "./components/WatchPage";
 import MainContainer from "./components/MainContainer";
 import SearchPageContainer from "./components/SearchPageContainer";
+import ShortsPage from "./components/ShortsPage";
 
 const appRouter = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/results",
         element: <SearchPageContainer />
+      },
+      {
+        path: "/shorts",
+        element: <ShortsPage />
       }
     ],
   },

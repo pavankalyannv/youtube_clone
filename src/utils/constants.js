@@ -19,7 +19,13 @@ export const RELATED_SEARCH =
 
 export const SEARCH_TEXT_API =
   "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&type=video&key=" +
-  GOOGLE_API_KEY + "&q=";
+  GOOGLE_API_KEY +
+  "&q=";
+
+export const SHORTS_API =
+  "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&type=video&videoDuration=short&key=" +
+  GOOGLE_API_KEY +
+  "&q=trendingshorts";
 
 export const SIDEBARDATA = [
   {
@@ -30,6 +36,7 @@ export const SIDEBARDATA = [
   {
     icon: "play_lesson",
     tabName: "Shorts",
+    url: "/shorts",
   },
   {
     icon: "subscriptions",
@@ -50,4 +57,17 @@ export const SIDEBARDATA1 = [
     icon: "timer",
     tabName: "Watch Later",
   },
+];
+
+export const LIST = [
+  "T-series",
+  "Pavan Kalyan",
+  "Music",
+  "Trending",
+  "Cricket",
+  "Live",
+  "Sports",
+  "Gaming",
+  "Computer Science",
+  "Trailers",
 ];
