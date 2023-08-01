@@ -24,8 +24,8 @@ const WatchPage = () => {
     
   };
   return (
-    <div className="flex  justify-center px-14 m-2">
-      <div className="flex flex-col">
+    <div className="flex justify-center">
+      <div className=" px-14 m-2">
         <div>
           <iframe
             width="750"
@@ -50,7 +50,7 @@ const WatchPage = () => {
           ))}
         </div>
       </div>
-      <div className="w-full">
+      <div className=" ">
         <RelatedSuggestions />
       </div>
     </div>

@@ -11,7 +11,7 @@ const Sidebar = () => {
     <div className=""  onBlur={()=> dispatch(closeMenu())}>
       <nav
         id="sidenav-2"
-        class="fixed left-0 top-0 z-[1035] h-screen w-60 -translate-x-full overflow-hidden bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] data-[te-sidenav-hidden='false']:translate-x-0 dark:bg-gray-10"
+        className="fixed left-0 top-0 z-[1035] h-screen w-60 -translate-x-full overflow-hidden bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] data-[te-sidenav-hidden='false']:translate-x-0 dark:bg-gray-10 dark:bg-black dark:text-white"
         data-te-sidenav-init
         data-te-sidenav-hidden="false"
         data-te-sidenav-mode="side"
@@ -39,7 +39,7 @@ const Sidebar = () => {
         <ul className="w-full py-2">
           {SIDEBARDATA.map((i, index) => (
             <Link key={"a" + index} to={i.url}>
-              <li className="m-1 cursor-pointer hover:bg-gray-100 px-3 rounded-lg">
+              <li className="m-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 px-3 rounded-lg">
                 <span className="material-symbols-outlined ">{i.icon}</span>
                 <span className="text-md pl-1">{i.tabName}</span>
               </li>
@@ -51,7 +51,7 @@ const Sidebar = () => {
           {SIDEBARDATA1.map((i, index) => (
             <li
               key={"b" + index}
-              className="m-1 cursor-pointer hover:bg-gray-100 px-3 rounded-lg"
+              className="m-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 px-3 rounded-lg"
             >
               <span className="material-symbols-outlined ">{i.icon}</span>
               <span className="text-md px-2">{i.tabName}</span>

@@ -3,7 +3,7 @@ const Comments = ({data}) => {
   const {snippet, replies} = data;
   
   return (
-    <div className="border border-gray-100 m-2 p-2">
+    <div className="border border-gray-200 dark:border-gray-800 rounded-md m-2 p-2">
       <div className="flex ">
         <img className="rounded-full h-10 my-1"
           src={snippet?.topLevelComment?.snippet?.authorProfileImageUrl}

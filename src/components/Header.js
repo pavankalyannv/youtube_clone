@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <div className=" w-full shadow-lg flex justify-between ">
+    <div className=" w-full shadow-lg flex justify-between bg-white dark:bg-black dark:text-white">
       <div className="flex ml-2 p-3" onBlur={() => dispatch(closeMenu())}>
         <span
           className=" pt-1 material-symbols-outlined cursor-pointer"
@@ -63,7 +63,7 @@ const Header = () => {
         <div className="w-[400px] border border-gray-200 rounded-l-full p-2  shadow-md h-10  border-r-0 flex ">
           <input
             type="text"
-            className="w-[400px] outline-0 px-3"
+            className="w-[400px] outline-0 px-3 dark:bg-black dark:text-white"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             onFocus={() => setShowSuggestions(true)}
@@ -89,7 +89,7 @@ const Header = () => {
                 searchByItem(searchInput);
                 setShowSuggestions(false);
               }}
-              className="material-symbols-outlined border p-1 h-10 w-10 cursor-pointer bg-gray-100 border-gray-600 rounded-r-full"
+              className="material-symbols-outlined border p-2 h-10 w-10 cursor-pointer bg-gray-100 border-gray-200 rounded-r-full dark:bg-black dark:text-white"
             >
               search
             </div>
@@ -98,9 +98,9 @@ const Header = () => {
         {showSuggestions && (
           <div
             onFocus={() => {
-              if (searchInput.length != null) setShowSuggestions(true);
+              if (searchInput.length >= 0) setShowSuggestions(true);
             }}
-            className="absolute mt-11 p-2 w-[400px] h-[300px] bg-white border border-gray-600 rounded-xl"
+            className="absolute mt-11 p-2 w-[400px] h-[300px] bg-white border border-gray-600 rounded-xl dark:bg-black dark:text-white"
           >
             <ul className="">
               {suggestions?.map((item) => (
@@ -108,11 +108,11 @@ const Header = () => {
                   <Link to={"/results?search_query=" + item}>
                     <div
                       key={item}
-                      className="flex hover:bg-gray-200"
+                      className="flex  hover:bg-gray-200 dark:hover:bg-gray-900  "
                       onClick={() => searchByItem(item)}
                     >
                       <span
-                        className="material-symbols-outlined pt-1"
+                        className="material-symbols-outlined pt-1 "
                         width="25"
                       >
                         search

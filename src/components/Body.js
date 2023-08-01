@@ -9,13 +9,13 @@ const Body = () => {
   return (
     <div>
       <Header />
-      <div className="flex">
+      <div className="flex dark:bg-black dark:text-white">
         {toggleMenu && (
           <div className="w-50 shadow-xl">
             <Sidebar />
           </div>
         )}
-        <div className="p-2 ml-1">
+        <div className="p-2 ml-1 dark:bg-black dark:text-white">
           
           <Outlet />
         </div>

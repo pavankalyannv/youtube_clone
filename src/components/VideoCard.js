@@ -4,7 +4,7 @@ const VideoCard = ({data}) => {
     const {snippet} = data;
     const { channelTitle, thumbnails, title } = snippet;
   return (
-    <div className="m-2 w-72 border border-blue-100 shadow-md">
+    <div className="m-2 h-[22rem] w-72 border border-gray-800 shadow-md rounded-sm">
       <img
         className="rounded-lg"
         src={thumbnails.high.url}
