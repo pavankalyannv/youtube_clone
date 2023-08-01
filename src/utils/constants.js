@@ -1,4 +1,4 @@
-const GOOGLE_API_KEY = "AIzaSyAyJduXHOrKGC-Tp0VugYhc66h7oKtUKJc";
+const GOOGLE_API_KEY = "AIzaSyB8evDC9DPajgGBNuaP5SSQAt1_utGzPt8";
 
 export const YOUTUBE_SEARCH_API =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";

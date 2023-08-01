@@ -3,6 +3,20 @@ import Sidebar from "./Sidebar";
 import { useSelector } from "react-redux/";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
+import TagList from "./TagList";
+
+const list = [
+  "T-series",
+  "Pavan Kalyan",
+  "Music",
+  "Trending",
+  "Cricket",
+  "Live",
+  "Sports",
+  "Gaming",
+  "Computer Science",
+  "Trailers",
+];
 
 const Body = () => {
   const toggleMenu = useSelector((store) => store.sidbar.isOpen);
@@ -16,7 +30,7 @@ const Body = () => {
           </div>
         )}
         <div className="p-2 ml-1 dark:bg-black dark:text-white">
-          
+          <TagList list={list}/>
           <Outlet />
         </div>
       </div>
