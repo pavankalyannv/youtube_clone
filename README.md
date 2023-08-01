@@ -3,6 +3,7 @@
 ![image](https://github.com/pavankalyannv/youtube_clone/assets/34576574/a9a6ade0-26e9-4758-b6fa-e39bf188f779)
 ![image](https://github.com/pavankalyannv/youtube_clone/assets/34576574/9c013479-db03-4ea5-b0bd-c06a6ccae096)
 ![image](https://github.com/pavankalyannv/youtube_clone/assets/34576574/766f68bc-895c-4478-89c3-1fdf2cbceb3d)
+![image](https://github.com/pavankalyannv/youtube_clone/assets/34576574/dbbba7d2-7a7e-4401-a087-4db31cf7c1b4)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -28,13 +29,14 @@ You may also see any lint errors in the console.
 - Rendering related content
 - WatchPage
 - Comments
+- Search By tag names
+- Light | Dark mode
 
 ###Upcoming:
 -------------
 - Live chat 
-- Search By tag names
 - Shots
-- Light | Dark mode
+  
 
 
 
