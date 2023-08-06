@@ -65,8 +65,11 @@ const Header = () => {
             type="text"
             className="w-[400px] outline-0 px-3 dark:bg-black dark:text-white"
             value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-            onFocus={() => setShowSuggestions(true)}
+            onChange={(e) => {
+              setSearchInput(e.target.value);
+              setShowSuggestions(true);
+            }}
+            onFocus={() => setShowSuggestions(false)}
             placeholder="Search"
           />
 
